@@ -1,337 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
-    <!-- Favicon-->
+    <title>Full Full Bakery - เมนูเค้กทั้งหมด</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-</head>
-<body id="page-top"> 
-    <!-- Navigation-->
-    <div id="menu-container"></div>
 
-    <!-- Products Section -->
-    <section class="page-section bg-light" id="products">
+    <style>
+        .text-primary { color: #e85d88 !important; }
+        .btn-primary { background-color: #e85d88 !important; border-color: #e85d88 !important; }
+        .btn-primary:hover { background-color: #d24873 !important; border-color: #d24873 !important; }
+        #mainNav .navbar-nav .nav-item .nav-link.active,
+        #mainNav .navbar-nav .nav-item .nav-link:hover { color: #e85d88 !important; }
+        
+        .badge-sale {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #e85d88;
+            color: white;
+            border-radius: 12px;
+            padding: 3px 12px;
+            font-size: 12px;
+            z-index: 1;
+        }
+        .card-cake {
+            border-radius: 15px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .card-cake:hover { transform: translateY(-5px); }
+        /* เปลี่ยนสีชื่อแบรนด์/โลโก้บน Navbar ให้เป็นสีขาว */
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+/* เพิ่มเติม: ป้องกันไม่ให้สีเปลี่ยนไปเมื่อเอาเมาส์ไปชี้ */
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+    </style>
+</head>
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase" href="index.html">
+                <i class="fas fa-birthday-cake me-2 text-primary"></i>Full Full Bakery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="product.html">เมนูเค้ก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-section bg-light" id="products" style="padding-top: 130px;">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Products</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h2 class="section-heading text-uppercase">Full Full Cake Menu</h2>
+                <h3 class="section-subheading text-muted">เมนูเค้กโฮมเมดสดใหม่ คัดสรรวัตถุดิบเกรดพรีเมียมเพื่อคุณ</h3>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="image/flower1.webp" alt="..."  />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Threads</div>
-                            <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="image/rose2.webp" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Explore</div>
-                            <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="image/lily3.webp" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Finish</div>
-                            <div class="portfolio-caption-subheading text-muted">Identity</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="image/tulip4.webp" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Lines</div>
-                            <div class="portfolio-caption-subheading text-muted">Branding</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="image/sunflower5.webp" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Southwest</div>
-                            <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="image/peony6.webp" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Window</div>
-                            <div class="portfolio-caption-subheading text-muted">Photography</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <!-- Product Grid JavaScript Render -->
+            <div class="row g-4" id="productGrid"></div>
         </div>
     </section>
-<!-- Container สำหรับโหลด Footer -->
-        <div id="footer"></div>
 
-           <!-- Portfolio Modals-->
-        <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="image/flower1.webp" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Threads
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Illustration
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Footer-->
+    <footer class="footer py-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">
+                    Copyright &copy; By Jantima Piampin 2026
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0 text-center">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-line"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <span class="me-3"><i class="fa-solid fa-phone me-1"></i> 062-732-9138</span>
+                    <span><i class="fa-solid fa-envelope me-1"></i> cpeiympin@gmail.com</span>
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="image/rose2.webp" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="image/lily3.webp" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="image/tulip4.webp" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="image/sunflower5.webp" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="image/peony6.webp" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- Bootstrap core JS-->
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    <script src="js/memu.js"></script>
+    <script>
+        const products = [
+            { id: 1, name: "เมนูที่ 1 เค้กแบล็กฟอเรสต์เชอร์รี (Black Forest Cake)", desc: "เค้กช็อกโกแลตเนื้อนุ่ม สอดไส้ครีมสดและแยมเชอร์รีฉ่ำๆ ตกแต่งด้วยเชอร์รีสดและช็อกโกแลตขูดรอบก้อน", price: 680, tag: "แนะนำ", img: "img/classics1.png" },
+            { id: 2, name: "เมนูที่ 2 เค้กชอร์ตเค้องุ่นไซมัสแคท (Shine Muscat Shortcake)", desc: "เค้กวนิลาเนื้อนุ่มเบา แทรกด้วยครีมสดละมุนและองุ่นไซมัสแคทสดลูกโต หวานกรอบ สดชื่น", price: 680, tag: "ขายดี", img: "img/classics2.png" },
+            { id: 3, name: "เมนูที่ 3 เค้กผลไม้รวมมิตรพรีเมียม (Mixed Fruit Fresh Cream Cake)", desc: "เค้กวนิลาครีมสด ท็อปด้วยผลไม้สดหลากหลายชนิด ทั้งสตรอว์เบอร์รี บลูเบอร์รี ส้ม และสปอนจ์เค้กสอดไส้ผลไม้แน่นๆ", price: 680, tag: "มาใหม่", img: "img/classics3.png" },
+            { id: 4, name: "เมนูที่ 4 สตรอว์เบอร์รีช็อตเค้กสไตล์โฮมเมด (Naked Strawberry Shortcake)", desc: "สปอนจ์เค้กเนื้อนุ่มสลับชั้นด้วยวิปครีมสดและแยมสตรอว์เบอร์รี ท็อปหน้าด้วยสตรอว์เบอร์รีสดและดอกไม้ประดับน่ารัก", price: 680, tag: "แนะนำ", img: "img/classics4.png" },
+            { id: 5, name: "เมนูที่ 5 เค้กช็อกโกแลตราดกานาชเข้มข้น (Ultimate Chocolate Ganache Cake)", desc: "เอาใจสายเข้มข้นด้วยเค้กช็อกโกแลตราดด้วยช็อกโกแลตกานาชเงาวาวและแต่งขอบด้วยบีบครีมช็อกโกแลตรสชาติเข้มข้น", price: 500, tag: "น่ารัก", img: "img/Hot1.png" },
+            { id: 6, name: "เมนูที่ 6 มินิสตรอว์เบอร์รีช็อตเค้ก (Mini Strawberry Layer Cake)", desc: "เค้กชั้นขนาดกะทัดรัด สอดไส้สตรอว์เบอร์รีสดชิ้นโตและครีมสด หวานอมเปรี้ยวกลมกล่อมพอดีคำ", price: 680, tag: "แนะนำ", img: "img/Hot2.png" },
+            { id: 7, name: "เมนูที่ 7 เค้กวันเกิดมินิมอลสีชมพู (Pink Vintage Birthday Cake)", desc: "เค้กแต่งหน้าสไตล์วินเทจสีชมพูพาสเทล บีบระบายครีมอย่างประณีต แต่งด้วยเชอร์รีและปักเทียนวันเกิดสุดน่ารัก", price: 800, tag: "ขายดี", img: "img/Hot3.png" },
+            { id: 8, name: "เมนูที่ 8 เค้กวนิลาครีมสดผลไม้เบอร์รี (Berry Vanilla Cream Cake)", desc: "เค้กวนิลาปาดครีมเนียนนุ่ม จัดเต็มด้วยผลไม้ตระกูลเบอร์รีสดและกีวี่ รสชาติหวานนุ่มตัดเปรี้ยวอย่างลงตัว", price: 680, tag: "มาใหม่", img: "img/Hot4.png" },
+            { id: 9, name: "เมนูที่ 9 ชีสเค้กญี่ปุ่นเนื้อฟูเด้ง (Japanese Soufflé Cheesecake)", desc: "ชีสเค้กซูเฟล่สไตล์ญี่ปุ่น เนื้อสัมผัสเนียนนุ่ม หอมกลิ่นชีสอ่อนๆ ละลายในปาก", price: 500, tag: "นิยม", img: "img/Hot5.png" },
+            { id: 10, name: "เมนูที่ 10 เค้กมัทฉะชาเขียวเข้มข้น (Uji Matcha Layer Cake)", desc: "เค้กชาเขียวมัทฉะเนื้อนุ่ม สลับชั้นด้วยครีมมัทฉะเข้มข้น โรยผงมัทฉะและเกล็ดช็อกโกแลตชาเขียวรอบฐาน", price: 500, tag: "แนะนำ", img: "img/Hot6.png" },
+            { id: 11, name: "เมนูที่ 11 เค้กวินเทจวิกตอเรียนสตรอว์เบอร์รี 2 ชั้น (Vintage Victorian Strawberry Tier Cake)", desc: "เค้ก 2 ชั้นดีไซน์คลาสสิก ปาดบีบระบายบัตเตอร์ครีมสไตล์วินเทจประณีตอ่อนช้อย ท็อปด้านบนด้วยสตรอว์เบอร์รีสดลูกโต", price: 1480, tag: "มาใหม่", img: "img/2tier1.png" },
+            { id: 12, name: "เมนูที่ 12 เค้กช็อกโกแลตเนเก็ดบิ๊กเบอร์รี 2 ชั้น (Two-Tier Chocolate Naked Berry Cake)", desc: "เค้กช็อกโกแลตโชว์เนื้อสปอนจ์สไตล์ Naked Cake สลับชั้นด้วยครีมสดเนียนนุ่ม ตกแต่งจัดเต็มด้วยมิกซ์เบอร์รีสด", price: 1480, tag: "ขายดี", img: "img/2tier2.png" },
+            { id: 13, name: "เมนูที่ 13 เค้กอาร์ตติสติกพาสเทลประดับดอกไม้สด 2 ชั้น (Artistic Pastel Floral Tier Cake)", desc: "เค้ก 2 ชั้นตกแต่งเทกเจอร์สีพาสเทลชมพู-ส้มสไตล์งานศิลปะปัดทองคำแท้ทานได้ (Gold Leaf) ประดับด้วยดอกไม้สด", price: 1480, tag: "ขายดี", img: "img/2tier3.png" },
+            { id: 14, name: "เมนูที่ 14 เค้กช็อกโกแลตดริปโอเวอร์โหลด 2 ชั้น (Ultimate Chocolate Drip Overload Cake)", desc: "เค้กช็อกโกแลต 2 ชั้นราดซอสช็อกโกแลตกานาชดริปฉ่ำๆ ตกแต่งแน่นเต็มหน้าด้วยสตรอว์เบอร์รี เฟอร์เรโร คุกกี้โอรีโอ", price: 1480, tag: "ขายดี", img: "img/2tier4.png" },
+            { id: 15, name: "เมนูที่ 15 เค้กแต่งงานมินิมอลขาวประดับดอกไม้และทองคำแท้ 2 ชั้น (Minimal White Floral & Gold Leaf Wedding Cake)", desc: "เค้ก 2 ชั้นสไตล์เรียบหรู ปาดครีมสร้างเทกเจอร์ธรรมชาติสีขาวบริสุทธิ์ ตกแต่งด้วยประติมากรรมดอกไม้สีขาวละมุน", price: 1480, tag: "ขายดี", img: "img/2tier5.png" }
+        ];
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = products.map(p => `
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card card-cake h-100 p-2 position-relative">
+                        <span class="badge-sale">${p.tag}</span>
+                        <img src="${p.img}" class="card-img-top rounded-3" style="height: 200px; object-fit: cover;" alt="${p.name}">
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <div>
+                                <h6 class="fw-bold mt-2" style="color: #e85d88;">${p.name}</h6>
+                                <p class="text-muted small mb-3" style="font-size: 11px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${p.desc}</p>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="fw-bold fs-6 text-danger">฿${p.price.toLocaleString()}</span>
+                                <button class="btn btn-sm btn-primary rounded-pill px-3"><i class="fas fa-cart-plus me-1"></i>สั่งซื้อ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.onload = renderProducts;
+    </script>
 </body>
 </html>

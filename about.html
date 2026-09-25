@@ -1,112 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-<!-- Favicon-->
+    <title>About Us - Full Full Bakery</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 
+    <style>
+        .text-primary { color: #e85d88 !important; }
+        .btn-primary { background-color: #e85d88 !important; border-color: #e85d88 !important; }
+        .btn-primary:hover { background-color: #d24873 !important; border-color: #d24873 !important; }
+        #mainNav .navbar-nav .nav-item .nav-link.active,
+        #mainNav .navbar-nav .nav-item .nav-link:hover { color: #e85d88 !important; }
+        
+        /* แก้ไขรูปภาพในไทม์ไลน์ให้เต็มวงกลมพอดี */
+        .timeline > li .timeline-image {
+            background-color: #fce8f0 !important;
+            border: 7px solid #fce8f0 !important;
+            overflow: hidden; /* ซ่อนส่วนที่เกินจากวงกลม */
+        }
+        .timeline > li .timeline-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* จัดให้รูปยืดเต็มพื้นที่วงกลมโดยสัดส่วนไม่เพี้ยน */
+        }
+    </style>
 </head>
-<body>
-        <!-- Navigation-->
-    <div id="menu-container"></div>
+<body id="page-top">
 
-       <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="image/File_015-500x500 11.jpeg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>September 2026</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase" href="index.html">
+                <i class="fas fa-birthday-cake me-2 text-primary"></i>Full Full Bakery
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                Menu <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">เมนูเค้ก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">ติดต่อเรา</a></li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </nav>
 
+    <!-- About Section Timeline -->
+    <section class="page-section" id="about" style="padding-top: 130px;">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">About Us 🎀</h2>
+                <h3 class="section-subheading text-muted">จุดเริ่มต้นและความตั้งใจในการอบเค้กของ Full Full Bakery</h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/cup3.png" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="text-primary">2018-2019</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">เริ่มต้นจากความหลงใหลในการทำเค้กโฮมเมด อบด้วยความใส่ใจจากครัวเล็กๆ ในบ้าน ส่งต่อความหวานให้อย่างอบอุ่น</p></div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/โลโก้ร้าน.png" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="text-primary">March 2020</h4>
+                            <h4 class="subheading">Full Full Bakery Born</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">เปิดตัวหน้าร้านเบเกอรี่อย่างเป็นทางการ พร้อมขยายเมนูเค้กโฮมเมดและขนมหวานหลากสไตล์</p></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="img/หน้าร้าน2.jpg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="text-primary">December 2022</h4>
+                            <h4 class="subheading">Custom Order Expansion</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">เพิ่มบริการรับทำเค้กวันเกิดสั่งทำพิเศษสไตล์มินิมอลและวินเทจ พร้อมส่งด่วนด้วยรถคุมอุณหภูมิ</p></div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image" style="background-color: #e85d88 !important;">
+                        <h4 class="text-white">Be Part<br />Of Our<br />Story! 💕</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer py-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">
+                    Copyright &copy; By Jantima Piampin 2026
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0 text-center">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-line"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <span class="me-3"><i class="fa-solid fa-phone me-1"></i> 062-732-9138</span>
+                    <span><i class="fa-solid fa-envelope me-1"></i> cpeiympin@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
-<!-- Container สำหรับโหลด Footer -->
-        <div id="footer"></div>
-        
-<!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
-<script src="js/memu.js"></script>
